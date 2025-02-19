@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Tesla</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="employee_list">Employee List</string>
+    <string name="name">Name</string>
+    <string name="create_employee">Create Employee</string>
+    <string name="not_available">Not available</string>
+    <string name="employee_details">Employee Details</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="salary">Salary</string>
+    <string name="designation">Designation</string>
+    <string name="update_employee">Update Employee</string>
+    <string name="no_employees">No Employees</string>
+    <string name="save_employee">Save Employee</string>
+</resources>

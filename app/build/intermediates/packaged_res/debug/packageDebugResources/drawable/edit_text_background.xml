@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#A93A3838" />
+
+    <corners android:radius="10dp" />
+
+    <!-- Fading edge gradient -->
+    <gradient
+        android:angle="270"
+        android:centerY="0.3"
+        android:endColor="#003A3838"
+        android:gradientRadius="40%p"
+        android:startColor="#943A3838"
+        android:type="linear" />
+</shape>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="dark_yellow">#FFFF9800</color>
+    <color name="darker_gray">#FF404040</color>
+    <color name="grey">#FF454547</color>
+    <color name="light_blue">#FF429CF8</color>
+    <color name="lighter_grey">#A9AAAAAA</color>
+    <color name="my_gray">#FF242426</color>
+    <color name="orange">#E6F24336</color>
+    <color name="transparent_black">#00FFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#D3FDC007</color>
+    <string name="address">Address</string>
+    <string name="app_name">Tesla</string>
+    <string name="create_employee">Create Employee</string>
+    <string name="designation">Designation</string>
+    <string name="email">Email</string>
+    <string name="employee_details">Employee Details</string>
+    <string name="employee_list">Employee List</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Name</string>
+    <string name="no_employees">No Employees</string>
+    <string name="not_available">Not available</string>
+    <string name="phone">Phone</string>
+    <string name="salary">Salary</string>
+    <string name="save_employee">Save Employee</string>
+    <string name="update_employee">Update Employee</string>
+    <style name="Base.Theme.Tesla" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="RoundedAlertDialog" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/rounded_dialog_background</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="Theme.Tesla" parent="Base.Theme.Tesla"/>
+</resources>

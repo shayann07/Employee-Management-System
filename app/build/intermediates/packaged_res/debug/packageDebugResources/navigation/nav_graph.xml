@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/employeeListFragment">
+
+    <fragment
+        android:id="@+id/employeeListFragment"
+        android:name="com.example.tesla.ui.fragments.EmployeeList"
+        android:label="Employee List">
+
+        <action
+            android:id="@+id/employeeListFragment_to_employeeDetailFragment"
+            app:destination="@id/employeeDetailsFragment" />
+
+        <action
+            android:id="@+id/employeeListFragment_to_newEmployeeFragment"
+            app:destination="@id/newEmployeeFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/employeeDetailsFragment"
+        android:name="com.example.tesla.ui.fragments.EmployeeDetails"
+        android:label="Employee Details" />
+
+    <fragment
+        android:id="@+id/newEmployeeFragment"
+        android:name="com.example.tesla.ui.fragments.NewEmployee"
+        android:label="Add Employee" />
+
+</navigation>

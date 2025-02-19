@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.example.tesla.app-mergeDebugResources-53:/layout/activity_main.xml",
+        "source": "com.example.tesla.app-main-56:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.tesla.app-mergeDebugResources-53:/layout/fragment_new_employee.xml",
+        "source": "com.example.tesla.app-main-56:/layout/fragment_new_employee.xml"
+    },
+    {
+        "merged": "com.example.tesla.app-mergeDebugResources-53:/layout/fragment_employee_list.xml",
+        "source": "com.example.tesla.app-main-56:/layout/fragment_employee_list.xml"
+    },
+    {
+        "merged": "com.example.tesla.app-mergeDebugResources-53:/layout/fragment_employee_details.xml",
+        "source": "com.example.tesla.app-main-56:/layout/fragment_employee_details.xml"
+    },
+    {
+        "merged": "com.example.tesla.app-mergeDebugResources-53:/layout/recycler_items.xml",
+        "source": "com.example.tesla.app-main-56:/layout/recycler_items.xml"
+    }
+]
