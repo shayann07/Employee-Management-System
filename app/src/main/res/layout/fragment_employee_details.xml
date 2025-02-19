@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.fragments.EmployeeList">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="12dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/backToHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/arrow_left" />
+
+        <TextView
+            android:id="@+id/all_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="8dp"
+            android:text="@string/employee_details"
+            android:textColor="@color/lighter_grey"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Name -->
+    <EditText
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/edit_text_background"
+        android:fontFamily="@font/roboto_regular"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:padding="9dp"
+        android:textColor="@color/white"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <!-- Email -->
+    <EditText
+        android:id="@+id/tvEmail"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/edit_text_background"
+        android:fontFamily="@font/roboto_regular"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:padding="9dp"
+        android:textColor="@color/white"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <!-- Phone -->
+    <EditText
+        android:id="@+id/tvPhone"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/edit_text_background"
+        android:fontFamily="@font/roboto_regular"
+
+        android:hint="@string/phone"
+        android:inputType="phone"
+        android:padding="9dp"
+        android:textColor="@color/white"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <!-- Address -->
+    <EditText
+        android:id="@+id/tvAddress"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/edit_text_background"
+        android:fontFamily="@font/roboto_regular"
+
+        android:hint="@string/address"
+        android:inputType="textPostalAddress"
+        android:padding="9dp"
+        android:textColor="@color/white"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <!-- Salary -->
+    <EditText
+        android:id="@+id/tvSalary"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/edit_text_background"
+        android:fontFamily="@font/roboto_regular"
+
+        android:hint="@string/salary"
+        android:inputType="numberDecimal"
+        android:padding="9dp"
+        android:textColor="@color/white"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <!-- Designation -->
+    <EditText
+        android:id="@+id/tvDesignation"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/edit_text_background"
+        android:fontFamily="@font/roboto_regular"
+        android:hint="@string/designation"
+        android:inputType="textPersonName"
+        android:padding="9dp"
+        android:textColor="@color/white"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <!-- Save Employee Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnUpdateEmployee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/my_gray"
+        android:text="@string/update_employee"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

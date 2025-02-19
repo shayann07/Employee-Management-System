@@ -1,0 +1,6 @@
+com.example.tesla.test.app-tracing-1.2.0-0 C:\Users\shaya\.gradle\caches\8.10.2\transforms\08b8acbda63713ad76195194a253849b\transformed\tracing-1.2.0\res
+com.example.tesla.test.app-core-1.6.1-1 C:\Users\shaya\.gradle\caches\8.10.2\transforms\1cd54114d4224379cddce3aed4c0eda7\transformed\core-1.6.1\res
+com.example.tesla.test.app-androidTest-2 D:\AndroidStudioProjects\Tesla\app\build\generated\res\resValues\androidTest\debug
+com.example.tesla.test.app-mergeDebugAndroidTestResources-3 D:\AndroidStudioProjects\Tesla\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.tesla.test.app-mergeDebugAndroidTestResources-4 D:\AndroidStudioProjects\Tesla\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.tesla.test.app-debugAndroidTest-5 D:\AndroidStudioProjects\Tesla\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
