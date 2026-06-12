@@ -1,35 +1,90 @@
 # Employee Management System
 
-A basic employee management system (EMS) that allows you to add, edit, view and delete employee records along with their department and role information.
+Offline Kotlin Android app for creating, viewing, updating, and deleting employee records stored in a local Room database.
+
+## Overview
+
+This project is a compact employee CRUD application built with XML layouts, View Binding, Jetpack Navigation, ViewModel, LiveData, coroutines, and Room. The employee list is the start screen, with routes to add a record or edit an existing employee's details.
+
+Each record contains a generated local ID plus name, email, phone, address, salary, and designation. The application has no server, account system, department model, or cloud synchronization.
 
 ## Features
-- Add new employees with details like name, ID, department, designation and contact info.
-- Update or delete employee records using CRUD operations.
-- View all employees in a list or search/filter by department or name.
-- Assign employees to departments and positions.
-- Responsive UI built with Material Design for a seamless experience.
+
+- Create employee records with six required fields
+- Display all employees in a RecyclerView
+- Empty-state message when no records exist
+- Open an employee detail/edit screen
+- Update employee fields in Room
+- Delete employees after a confirmation dialog
+- Automatic Room primary-key generation
+- List updates after create, edit, or delete operations
+- Parcelable employee records passed between fragments
 
 ## Tech Stack
-- **Kotlin** and **Java** for Android development.
-- **Android Jetpack** components (LiveData, ViewModel).
-- **Room** database for local storage.
-- **Material Design** components and **RecyclerView**.
-- **Coroutines** for asynchronous operations.
+
+- Kotlin
+- Android SDK and XML layouts
+- View Binding
+- Jetpack Navigation
+- Android ViewModel and LiveData
+- Kotlin coroutines
+- Room with KSP code generation
+- RecyclerView and `ListAdapter`
+- Material Components
+
+## Architecture
+
+The app follows a small MVVM-style structure:
+
+1. `EmployeeList` renders Room records and handles add, open, and delete actions.
+2. `NewEmployee` validates required fields and requests an insert.
+3. `EmployeeDetails` displays editable fields and requests an update.
+4. `EmployeeViewmodel` performs coroutine-based repository calls and publishes list/update state.
+5. `EmployeeRepository` moves Room operations to `Dispatchers.IO`.
+6. `EmployeeDao` defines insert, update, delete, and query operations.
+
+## Project Structure
+
+```text
+app/src/main/java/com/example/tesla/
+|-- adapter/          # RecyclerView ListAdapter and diffing
+|-- data/
+|   |-- local/        # Room database and DAO
+|   |-- models/       # Employee entity
+|   `-- repository/   # Coroutine-based Room access
+|-- ui/
+|   |-- fragments/    # List, create, and detail/edit screens
+|   |-- viewmodel/    # Employee state and actions
+|   `-- MainActivity.kt
+`-- utils/            # One-time event wrapper
+```
 
 ## Getting Started
-1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/shayann07/Employee-Management-System.git
-   ```
+### Prerequisites
 
-2. Open the project in Android Studio.
-3. Sync Gradle and download dependencies.
-4. Build and run the app on an emulator or Android device.
-5. Modify and expand as needed to fit your use case.
+- Android Studio with a JDK compatible with Android Gradle Plugin 8.8.1
+- Android SDK 35
+- An Android 7.0 (API 24) or newer device or emulator
 
-## Contributing
-Contributions are welcome! Feel free to open issues or submit pull requests. Please follow the existing code style and commit guidelines.
+### Build
 
-## License
-This project is licensed under the MIT License.
+```bash
+git clone https://github.com/shayann07/Employee-Management-System.git
+cd Employee-Management-System
+./gradlew assembleDebug
+```
+
+On Windows PowerShell, use `./gradlew.bat assembleDebug`. No backend or API setup is required.
+
+## Current Status and Limitations
+
+- Data is local to one device and is not backed up to an application server.
+- There is no employee search, filtering, department field, role assignment, authentication, or import/export.
+- Email, phone, and salary fields are checked only for emptiness, not format or numeric validity.
+- The create screen immediately reports success and navigates back without observing whether the repository insert succeeded.
+- Database version changes use destructive migration fallback and can erase stored employees.
+- The Android app label is `Tesla`, which does not match the repository purpose.
+- Machine-specific `local.properties` and extensive Gradle cache files are tracked.
+- Only generated example unit and instrumentation tests are present.
+- No license file is included.
